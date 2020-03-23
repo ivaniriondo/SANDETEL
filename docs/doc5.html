@@ -1,0 +1,151 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>5. Aprovechamiento de infraestructuras físicas · Sociedad Andaluza para el Desarrollo de las Telecomunicaciones S.A. (SANDETEL)</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;div style=&quot;text-align: justify&quot;&gt;"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="5. Aprovechamiento de infraestructuras físicas · Sociedad Andaluza para el Desarrollo de las Telecomunicaciones S.A. (SANDETEL)"/><meta property="og:type" content="website"/><meta property="og:url" content="https://ivan.iriondo.github.io/SANDETEL/"/><meta property="og:description" content="&lt;div style=&quot;text-align: justify&quot;&gt;"/><meta property="og:image" content="https://ivan.iriondo.github.io/SANDETEL/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://ivan.iriondo.github.io/SANDETEL/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/SANDETEL/img/2020-03-17_15h39_07.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/SANDETEL/js/scrollSpy.js"></script><link rel="stylesheet" href="/SANDETEL/css/main.css"/><script src="/SANDETEL/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/SANDETEL/"><img class="logo" src="/SANDETEL/img/2020-03-17_15h39_07.png" alt="Sociedad Andaluza para el Desarrollo de las Telecomunicaciones S.A. (SANDETEL)"/><h2 class="headerTitleWithLogo">Sociedad Andaluza para el Desarrollo de las Telecomunicaciones S.A. (SANDETEL)</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/SANDETEL/docs/doc1" target="_self">Docs</a></li><li class=""><a href="/SANDETEL/help" target="_self">Help</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Índice</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Índice</h3><ul class=""><li class="navListItem"><a class="navItem" href="/SANDETEL/docs/doc1">1. Introducción</a></li><li class="navListItem"><a class="navItem" href="/SANDETEL/docs/doc2">2. Infraestructuras de redes de acceso a servicios de banda ancha</a></li><li class="navListItem"><a class="navItem" href="/SANDETEL/docs/doc3">3. Escenarios generales de despliegue</a></li><li class="navListItem"><a class="navItem" href="/SANDETEL/docs/doc4">4. Escenarios especiales</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/SANDETEL/docs/doc5">5. Aprovechamiento de infraestructuras físicas</a></li><li class="navListItem"><a class="navItem" href="/SANDETEL/docs/doc6">6. Aspectos a tener en cuenta en el despliegue de redes</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">5. Aprovechamiento de infraestructuras físicas</h1></header><article><div><span><div style="text-align: justify">
+<p>La LGTEL, con objeto de facilitar el despliegue de redes incluye, entre otras medidas, la de permitir a los operadores
+el acceso a las infraestructuras de las administraciones públicas susceptibles de ser usadas para dicho despliegue
+(art. 37.1).</p>
+<p>El RD 330/2016, que transpone la Directiva 2014/61/UE, de 15 de mayo de 2014, relativa a medidas para
+reducir el coste del despliegue de las redes de comunicaciones electrónicas de alta velocidad, establece la
+regulación de esta materia, en desarrollo de la LGTEL.</p>
+<p>Son sujetos obligados, a los efectos de lo previsto en el RD 330/2016, una serie de &quot;propietarios, gestores o
+titulares de derechos de utilización de infraestructuras físicas susceptibles de alojar redes públicas de
+comunicaciones electrónicas de alta velocidad”, entre los que incluye a “las administraciones públicas titulares de
+infraestructuras físicas susceptibles de alojar redes de comunicaciones electrónicas” (art. 3.5 RD 330/2016).</p>
+<p>La norma resulta de aplicación a “las infraestructuras físicas susceptibles de alojar redes públicas de
+comunicaciones electrónicas de alta velocidad y a las obras civiles relativas a dichas infraestructuras”. Es decir, a
+redes tanto fijas como móviles capaces de prestar servicios de acceso de al menos 30 Mbps (incluyendo, entre
+otras, tecnologías como FTTH, HFC o LTE). A estos efectos, son infraestructuras físicas “cualquier elemento de
+una red pensado para albergar otros elementos de una red sin llegar a ser un elemento activo de ella, como
+tuberías, mástiles, conductos, cámaras de acceso, bocas de inspección, distribuidores, edificios o entradas a
+edificios, instalaciones de antenas, torres y postes” (art. 2.1 RD 330/2016).</p>
+<p>Por tanto, este RD recoge una serie de derechos de los operadores y obligaciones a las administraciones públicas
+en el caso en el que dispongan de infraestructuras físicas que puedan alojar redes de comunicaciones electrónicas,
+con el fin de fomentar el despliegue eficiente de redes capaces de proporcionar servicios avanzados de acceso a
+internet. Por ello se ha considerado de interés destacar en este apartado los aspectos más relevantes del RD
+330/2016, así como plantear una serie de recomendaciones que pudieran facilitar a la administración el
+cumplimiento de las obligaciones. Igualmente, se destacan los beneficios que pueden redundar en el municipio
+derivados del cumplimiento de esta norma.</p>
+<h2><a class="anchor" aria-hidden="true" id="51-resumen-de-las-medidas"></a><a href="#51-resumen-de-las-medidas" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>5.1 Resumen de las medidas</h2>
+<p>Desde el punto de vista de la afección a una administración local las principales medidas del RD 330/2016 son
+las siguientes:</p>
+<ul>
+<li>Derecho de acceso de los operadores a las infraestructuras físicas susceptibles de alojar redes de alta
+velocidad siempre que estas sean de titularidad de alguno de los sujetos obligados.</li>
+<li>Coordinación de obras civiles susceptibles de alojar redes de comunicaciones electrónicas de alta velocidad.</li>
+<li>Medidas dirigidas a garantizar la mayor brevedad posible en la resolución de los procedimientos de concesión
+de permisos o licencias relacionados con las obras civiles necesarias para desplegar elementos de las redes
+de comunicaciones electrónicas de alta velocidad.
+Esta guía se ocupa, por su relevancia, de la primera de las medidas indicadas, el derecho de acceso de los
+operadores a las infraestructuras físicas susceptibles de alojar redes de alta velocidad.</li>
+</ul>
+<p>Esta medida se recoge en el capítulo II del RD 330/2016 que establece, junto al reconocimiento del derecho de
+acceso de los operadores, los siguientes aspectos destacables:</p>
+<ul>
+<li>Contenido mínimo de la solicitud de acceso por parte de operadores.</li>
+<li>El acceso a infraestructuras de titularidad de las administraciones públicas no podrá ser otorgado o reconocido
+mediante procedimientos de licitación.</li>
+<li>Cualquier denegación de acceso deberá justificarse de manera clara al solicitante, en el plazo máximo de dos
+meses a partir de la fecha de recepción de la solicitud de acceso completa, exponiendo los motivos en los que
+se fundamenta.</li>
+<li>La denegación deberá basarse en criterios objetivos, transparentes y proporcionados.</li>
+<li>Cualquiera de las partes podrá plantear el conflicto ante la CNMC cuando se deniegue el acceso o cuando
+transcurrido el plazo de dos meses, no se llegue a un acuerdo sobre las condiciones en las que debe
+producirse el mismo, incluidos los precios, sin perjuicio del posible sometimiento de la cuestión ante los
+tribunales.</li>
+</ul>
+<p>El capítulo II se completa con el establecimiento de medidas de transparencia que permiten que los operadores
+puedan disponer de información mínima en relación con las infraestructuras existentes, a fin de poder ejercer su
+derecho de acceso a las mismas. Estas medidas de transparencia son fundamentalmente las dos siguientes:</p>
+<ul>
+<li>Derecho a acceder, previa solicitud por escrito en la que se especifique la zona en la que tienen intención de
+desplegar, a una serie de elementos de información mínima.</li>
+<li>Derecho de los operadores a que sean atendidas las solicitudes razonables de realización de estudios sobre
+el terreno de elementos específicos de sus infraestructuras físicas susceptibles de alojar redes de
+comunicaciones electrónicas.</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="52-recomendaciones"></a><a href="#52-recomendaciones" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>5.2 Recomendaciones</h2>
+<p>En el caso de que la administración local disponga de infraestructuras contenidas en el ámbito de aplicación del
+RD 330/2016 se proponen una serie de actuaciones que facilitarían el cumplimiento de las obligaciones de la
+norma:</p>
+<ul>
+<li>Puesta en marcha de actuaciones para determinar la localización y trazado de las infraestructuras de su
+titularidad cuyo acceso pueda ser solicitado por algún operador, el uso al que esté destinada, el grado de
+utilización de la infraestructura y si en la misma queda o no espacio vacante.</li>
+<li>Volcado de la información en un sistema de información geográfico, para un conveniente mantenimiento,
+actualización y explotación de la misma.</li>
+<li>Creación de un punto de contacto encargado de atender las solicitudes de acceso a dichas infraestructuras
+que puedan presentar los operadores, de acordar con ellos la fecha y condiciones en que estos podrán realizar
+un estudio sobre el terreno de la infraestructura y acompañarlos a tal fin, así como de fijar el precio del acceso,
+sus condiciones técnicas, y medidas de coordinación con otros operadores cuando varios de ellos accedan a
+la misma infraestructura.</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="53-beneficios-de-la-adecuación-al-rd-3302016"></a><a href="#53-beneficios-de-la-adecuación-al-rd-3302016" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>5.3 Beneficios de la adecuación al RD 330/2016</h2>
+<p>Finalmente, se destacan los beneficios que redundarían en el municipio derivados del cumplimiento de la norma:</p>
+<ul>
+<li>Reducción del coste del despliegue de las redes de banda ancha para los operadores, favoreciendo la oferta
+de servicios de acceso a internet de calidad en el municipio.</li>
+<li>En la medida en que no sea necesaria la implantación de nuevas infraestructuras físicas que den soporte a
+las redes, reducción del impacto visual y perceptivo del despliegue de redes en el entorno urbano y en el rural
+en el que este tenga lugar.</li>
+<li>Como consecuencia de lo anterior, estas medidas pueden suponer un cauce para superar las restricciones
+que establece el ordenamiento jurídico para desplegar redes en entornos protegidos, es decir redes que tengan
+impacto en patrimonio histórico artístico o espacios naturales protegidos.</li>
+<li>Nueva fuente de financiación para las entidades locales, ya que “las administraciones públicas titulares de las
+infraestructuras a las que se hace referencia en este artículo tendrán derecho a establecer las compensaciones
+económicas que correspondan por el uso que de ellas se haga por parte de los operadores” (art. 37.7 LGTEL).</li>
+</ul>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/SANDETEL/docs/doc4"><span class="arrow-prev">← </span><span>4. Escenarios especiales</span></a><a class="docs-next button" href="/SANDETEL/docs/doc6"><span>6. Aspectos a tener en cuenta en el despliegue de redes</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#51-resumen-de-las-medidas">5.1 Resumen de las medidas</a></li><li><a href="#52-recomendaciones">5.2 Recomendaciones</a></li><li><a href="#53-beneficios-de-la-adecuación-al-rd-3302016">5.3 Beneficios de la adecuación al RD 330/2016</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/SANDETEL/" class="nav-home"><img src="/SANDETEL/img/2020-03-17_15h39_07.png" alt="Sociedad Andaluza para el Desarrollo de las Telecomunicaciones S.A. (SANDETEL)" width="66" height="58"/></a><div><h5>Docs</h5><a href="/SANDETEL/docs/en/doc1.html">Getting Started (or other categories)</a><a href="/SANDETEL/docs/en/doc2.html">Guides (or other categories)</a><a href="/SANDETEL/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/SANDETEL/en/users.html">User Showcase</a><a href="https://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/SANDETEL/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><a href="https://opensource.facebook.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/SANDETEL/img/oss_logo.png" alt="Facebook Open Source" width="170" height="45"/></a><section class="copyright">Copyright © 2020 Your Name or Your Company Name</section></footer></div></body></html>

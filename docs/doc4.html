@@ -1,0 +1,242 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>4. Escenarios especiales · Sociedad Andaluza para el Desarrollo de las Telecomunicaciones S.A. (SANDETEL)</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;div style=&quot;text-align: justify&quot;&gt;"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="4. Escenarios especiales · Sociedad Andaluza para el Desarrollo de las Telecomunicaciones S.A. (SANDETEL)"/><meta property="og:type" content="website"/><meta property="og:url" content="https://ivan.iriondo.github.io/SANDETEL/"/><meta property="og:description" content="&lt;div style=&quot;text-align: justify&quot;&gt;"/><meta property="og:image" content="https://ivan.iriondo.github.io/SANDETEL/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://ivan.iriondo.github.io/SANDETEL/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/SANDETEL/img/2020-03-17_15h39_07.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/SANDETEL/js/scrollSpy.js"></script><link rel="stylesheet" href="/SANDETEL/css/main.css"/><script src="/SANDETEL/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/SANDETEL/"><img class="logo" src="/SANDETEL/img/2020-03-17_15h39_07.png" alt="Sociedad Andaluza para el Desarrollo de las Telecomunicaciones S.A. (SANDETEL)"/><h2 class="headerTitleWithLogo">Sociedad Andaluza para el Desarrollo de las Telecomunicaciones S.A. (SANDETEL)</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/SANDETEL/docs/doc1" target="_self">Docs</a></li><li class=""><a href="/SANDETEL/help" target="_self">Help</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Índice</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Índice</h3><ul class=""><li class="navListItem"><a class="navItem" href="/SANDETEL/docs/doc1">1. Introducción</a></li><li class="navListItem"><a class="navItem" href="/SANDETEL/docs/doc2">2. Infraestructuras de redes de acceso a servicios de banda ancha</a></li><li class="navListItem"><a class="navItem" href="/SANDETEL/docs/doc3">3. Escenarios generales de despliegue</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/SANDETEL/docs/doc4">4. Escenarios especiales</a></li><li class="navListItem"><a class="navItem" href="/SANDETEL/docs/doc5">5. Aprovechamiento de infraestructuras físicas</a></li><li class="navListItem"><a class="navItem" href="/SANDETEL/docs/doc6">6. Aspectos a tener en cuenta en el despliegue de redes</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">4. Escenarios especiales</h1></header><article><div><span><div style="text-align: justify">
+<p>Los escenarios especiales son aquellos en los que concurren circunstancias, bien asociadas al tipo de actuación
+que se realiza o a las particularidades del tipo de espacio en el que tiene lugar el despliegue, que justifican un
+régimen diferente al previsto con carácter general para el despliegue de redes.</p>
+<p>En relación con cada uno de los escenarios especiales pueden identificarse, a través del cuadro correspondiente,
+cuales son los instrumentos de control que se recomienda emplear a la entidad local. Atendiendo a su complejidad,
+en relación con alguno de los escenarios especiales, se ha incluido también, a través del flujo correspondiente, un
+esquema del procedimiento, paso a paso, desde su inicio hasta la conclusión de tal procedimiento con la
+realización de la actuación.</p>
+<h2><a class="anchor" aria-hidden="true" id="41-actuaciones-de-innovación-tecnológica-o-adaptación-técnica"></a><a href="#41-actuaciones-de-innovación-tecnológica-o-adaptación-técnica" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4.1 Actuaciones de innovación tecnológica o adaptación técnica</h2>
+<p>Esta tipología de actuaciones viene recogida en el art. 34.7 de la LGTEL, del que se trascribe literalmente:
+En el caso de que sobre una infraestructura de red pública de comunicaciones electrónicas, fija o móvil, incluidas
+las estaciones radioeléctricas de comunicaciones electrónicas, ya esté ubicada en dominio público o privado, se
+realicen actuaciones de innovación tecnológica o adaptación técnica que supongan la incorporación de nuevo
+equipamiento o la realización de emisiones radioeléctricas en nuevas bandas de frecuencias o con otras
+tecnologías, sin variar los elementos de obra civil y mástil, no se requerirá ningún tipo de concesión, autorización
+o licencia nueva o modificación de la existente o declaración responsable o comunicación previa a las
+administraciones públicas competentes por razones de ordenación del territorio, urbanismo o medioambientales.</p>
+<p>La determinación de en que supuestos puede calificarse la actuación como innovación tecnológica o adaptación
+técnica debe realizarse caso a caso, dados los términos en los que se regula la materia, dicha calificación
+corresponde en principio al operador que realiza la actuación.</p>
+<p>Para la identificación del instrumento de control que se recomienda emplear en relación con las actuaciones de
+innovación tecnológica o adaptación técnica que tengan lugar en espacios de patrimonio histórico artístico, debe
+acudirse al apartado “4.4 ”.</p>
+<h2><a class="anchor" aria-hidden="true" id="42-despliegues-en-espacios-no-clasificados-como-suelo-urbano"></a><a href="#42-despliegues-en-espacios-no-clasificados-como-suelo-urbano" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4.2 Despliegues en espacios no clasificados como suelo urbano</h2>
+<h3><a class="anchor" aria-hidden="true" id="421-suelo-no-urbanizable"></a><a href="#421-suelo-no-urbanizable" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4.2.1 Suelo no urbanizable</h3>
+<p>En este escenario de despliegue se recomienda emplear los instrumentos de control que se indican en el siguiente
+cuadro, sin perjuicio de las adaptaciones que puedan resultar convenientes en base a las particularidades del
+supuesto de que se trate o de las especialidades de la normativa local.</p>
+<p>En el suelo no urbanizable procede la realización de los actos precisos para la utilización y explotación agrícola,
+ganadera, forestal, cinegética o análoga del mismo, conforme a su naturaleza y mediante el empleo de medios
+técnicos e instalaciones adecuadas y ordinarias. El despliegue de redes de telecomunicaciones no se corresponde
+con la naturaleza de este tipo de suelo, siendo necesario acreditar el interés público de la instalación para que
+dicho despliegue pueda realizarse (artículos 42 y 43 LOUA).</p>
+<p>En esta tipología de suelo, una vez acreditado el interés público de la actuación mediante la aprobación del proyecto
+de actuación (ver apartado 4.2.1.1) o el plan especial (4.2.1.2), según corresponda, los instrumentos de control
+urbanístico, o de la instalación, funcionamiento o actividad y los instrumentos de control ambiental serán los que
+procedan en función de la tipología de red (cableada o inalámbrica), titularidad del suelo (dominio público o
+propiedad privada), o del ámbito de despliegue (en edificaciones o fuera de ellas).</p>
+<p><img src="/img/tabla11.png" alt=""></p>
+<ol>
+<li>En relación con el control medioambiental, conforme a la LGICA, las redes cableadas quedarán sujetas a
+CA-DR (Cat. 13.57 bis, Anexo I, LGICA). Las inalámbricas, cuando se despliegan en suelo no urbanizable,
+quedarán sometidas a CA (Cat. 13.57, Anexo I, LGICA).</li>
+</ol>
+<p>Las actuaciones que tengan lugar en terrenos sujetos a este régimen se entenderán realizadas en precario y con
+carácter provisional (art. 52.3 LOUA).</p>
+<p>A continuación, se detallan los procedimientos asociados a la tramitación de los proyectos de actuación y de los
+planes especiales.</p>
+<h4><a class="anchor" aria-hidden="true" id="4211-actuaciones-sometidas-a-proyecto-de-actuación"></a><a href="#4211-actuaciones-sometidas-a-proyecto-de-actuación" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4.2.1.1 Actuaciones sometidas a proyecto de actuación</h4>
+<p>Procede la formulación de un proyecto de actuación en los casos en que la actuación no comprenda terrenos de
+más de un municipio, ni tenga incidencia o trascendencia supramunicipal, o afecte a la ordenación estructural del
+municipio, ni comprenda una superficie superior a 50 hectáreas (art. 43 LOUA).</p>
+<p>El procedimiento de aprobación del proyecto de actuación comprende los siguientes pasos:</p>
+<p><img src="/img/ilustracion3.png" alt=""></p>
+<h4><a class="anchor" aria-hidden="true" id="4212-actuaciones-sometidas-a-plan-especial"></a><a href="#4212-actuaciones-sometidas-a-plan-especial" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4.2.1.2 Actuaciones sometidas a plan especial</h4>
+<p>Procede la formulación de un plan especial en los casos en que la actuación comprenda terrenos de más de un
+municipio, tenga incidencia o trascendencia supramunicipal, afecte a la ordenación estructural del municipio, o
+comprenda una superficie superior a 50 hectáreas (art. 43 LOUA). Los planes especiales se encuentran sometidos
+a evaluación ambiental estratégica (art. 40.2.c. de la LGICA).</p>
+<p><img src="/img/ilustracion4.png" alt=""></p>
+<h3><a class="anchor" aria-hidden="true" id="422-otros-tipos-de-suelo"></a><a href="#422-otros-tipos-de-suelo" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4.2.2 Otros tipos de suelo</h3>
+<p>En otras modalidades de suelo los instrumentos de control urbanístico, o de la instalación, funcionamiento o
+actividad y los instrumentos de control ambiental serán los que procedan conforme a lo dispuesto en esta guía en
+función de la tipología de red (cableada o inalámbrica), titularidad del suelo (dominio público o propiedad privada),
+o del ámbito de despliegue (en edificaciones o fuera de las mismas).</p>
+<p>Sin embargo, las actuaciones que se realicen en las siguientes modalidades de suelo están sujetas a algunas
+particularidades:</p>
+<ul>
+<li>En suelo urbano no consolidado y urbanizable sectorizado las actuaciones deberán entenderse realizadas en
+precario (art. 53.1 LOUA).</li>
+<li>En suelo urbanizable no sectorizado las actuaciones estarán sujetas al mismo régimen que las realizadas en
+suelo no urbanizable, es decir, podrán autorizarse actuaciones de interés público cuando concurran los
+supuestos de utilidad pública e interés social (art. 53.2 LOUA).</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="43-despliegue-en-espacios-naturales-protegidos"></a><a href="#43-despliegue-en-espacios-naturales-protegidos" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4.3 Despliegue en espacios naturales protegidos</h2>
+<p>En este apartado se hace referencia al flujo de tramitación del procedimiento que habrá de seguirse a fin de
+efectuar un despliegue de infraestructuras de telecomunicaciones en espacios naturales protegidos, (incluidos los
+recogidos en la Ley 2/1989, de 18 de julio, por la que se aprueba el inventario de Espacios Naturales Protegidos
+de Andalucía y se establecen medidas adicionales para su protección), Red Natura 2000 y Áreas protegidas por
+instrumentos internacionales, según la regulación de la Ley 42/2007, de 13 de diciembre, del Patrimonio Natural
+y de la Biodiversidad.</p>
+<p>Una vez realizado el control ambiental de la actuación por la administración autonómica, corresponde a la entidad
+local realizar el control de las materias que resulten de su competencia en este caso. Para identificar los
+instrumentos adecuados para realizar dicho control resultará de aplicación aquí lo dispuesto en el apartado 3
+relativo a los supuestos generales.</p>
+<p><img src="/img/ilustracion5.png" alt=""></p>
+<h2><a class="anchor" aria-hidden="true" id="44-despliegues-con-impacto-en-patrimonio-histórico-artístico"></a><a href="#44-despliegues-con-impacto-en-patrimonio-histórico-artístico" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4.4 Despliegues con impacto en patrimonio histórico-artístico</h2>
+<h3><a class="anchor" aria-hidden="true" id="441-actuaciones-de-innovación-tecnológica-o-adaptación-técnica"></a><a href="#441-actuaciones-de-innovación-tecnológica-o-adaptación-técnica" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4.4.1 Actuaciones de innovación tecnológica o adaptación técnica</h3>
+<p>En este escenario de despliegue se recomienda emplear los instrumentos de control que se indican en el siguiente
+cuadro, sin perjuicio de las adaptaciones que puedan resultar convenientes en base a las particularidades del
+supuesto de que se trate o de las especialidades de la normativa local.</p>
+<p><img src="/img/tabla12.png" alt=""></p>
+<p>Particularidades del escenario:</p>
+<ol>
+<li>En estos casos “no se requerirá ningún tipo de concesión, autorización o licencia nueva o modificación
+de la existente o declaración responsable o comunicación previa a las administraciones públicas
+competentes por razones de ordenación del territorio, urbanismo o medioambientales” (art. 34.7 LGTEL).</li>
+<li>El artículo 34.7 de la LGTEL no se refiere de manera expresa a la administración competente por razones
+de protección del patrimonio cultural o histórico, de manera que podría entenderse que el régimen
+previsto en la Ley de Patrimonio Histórico de Andalucía no se ve afectado por dicha disposición. Por tanto,
+las “actuaciones no sometidas legalmente al trámite reglado de licencia municipal, que hubieran de
+realizarse en BIC, en su entorno o en bienes de catalogación general”, requerirán autorización previa de
+la administración competente6 en materia de patrimonio histórico cuando se trate de BIC y en caso de
+bienes de catalogación general deberá recabarse, del órgano competente en materia de patrimonio
+histórico, con carácter previo al despliegue, el informe de medidas correctoras que se consideren
+imprescindibles para la protección del bien (art. 34 de la LPHA).</li>
+</ol>
+<p>El procedimiento a seguir por parte del promotor del despliegue a fin de poder llevarlo a cabo será el siguiente:</p>
+<p><img src="/img/ilustracion7.png" alt=""></p>
+<h3><a class="anchor" aria-hidden="true" id="442-despliegue-en-dominio-público"></a><a href="#442-despliegue-en-dominio-público" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4.4.2 Despliegue en dominio público</h3>
+<p>En este escenario de despliegue se recomienda emplear los instrumentos de control que se indican en el siguiente
+cuadro, sin perjuicio de las adaptaciones que puedan resultar convenientes en base a las particularidades del
+supuesto de que se trate o de las especialidades de la normativa local.</p>
+<p><img src="/img/tabla13.png" alt=""></p>
+<p>Particularidades del escenario:</p>
+<ol>
+<li>En este caso la determinación del título habilitante para la ocupación del dominio público vendrá
+determinada, en cada caso, por el tipo de uso que la red haga de dicho dominio; el uso común especial
+se sujetará a licencia y el uso privativo requerirá el otorgamiento de concesión administrativa (art. 30.3
+LBELA).</li>
+<li>La tutela del patrimonio histórico se realiza mediante la obtención de la correspondiente autorización
+otorgada por el órgano competente en esta materia cuando se trate de bienes inscritos como BIC o su
+entorno (art. 33.3 LPHA); o bien mediante Comunicación a la Consejería competente en materia de
+patrimonio histórico cuando se trate de bienes de catalogación general (art. 33.5 LPHA).</li>
+<li>En el caso de despliegue en terrenos de dominio público no resultan de aplicación los supuestos de
+inexigibilidad de licencia previstos en el art. 34.6 de la LGTEL (instalación funcionamiento o actividad) o
+DA 8ª de la LOE (obra), ya que los mismos únicamente aplica en propiedad privada.</li>
+<li>En relación con el control ambiental, las redes cableadas se verán sometidas a calificación ambiental
+mediante declaración responsable como trámite ambiental (Cat. 13.57 bis, Anexo I, LGICA). Las redes
+inalámbricas están sujetas a calificación ambiental (Cat. 13.57, Anexo I, LGICA).</li>
+</ol>
+<p><img src="/img/ilustracion8.png" alt=""></p>
+<p><img src="/img/ilustracion9.png" alt=""></p>
+<h3><a class="anchor" aria-hidden="true" id="443-despliegue-en-propiedad-privada"></a><a href="#443-despliegue-en-propiedad-privada" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4.4.3 Despliegue en propiedad privada</h3>
+<h4><a class="anchor" aria-hidden="true" id="4431-despliegue-en-edificaciones"></a><a href="#4431-despliegue-en-edificaciones" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4.4.3.1 Despliegue en edificaciones</h4>
+<p>En este escenario de despliegue se recomienda emplear los instrumentos de control que se indican en el siguiente
+cuadro, sin perjuicio de las adaptaciones que puedan resultar convenientes en base a las particularidades del
+supuesto de que se trate o de las especialidades de la normativa local.</p>
+<p><img src="/img/tabla14.png" alt=""></p>
+<p>Particularidades del escenario:</p>
+<ol>
+<li>La tutela del patrimonio histórico en este caso se realiza mediante la obtención de la correspondiente
+autorización otorgada por el órgano competente en esta materia cuando se trate de bienes inscritos como
+BIC o su entorno; o bien mediante Comunicación a la Consejería competente en materia de patrimonio
+histórico cuando se trate de bienes de catalogación general (art. 34 de la LPHA).</li>
+<li>Una vez obtenida la autorización correspondiente por parte del órgano competente para la protección de
+patrimonio histórico, y en base a la DA 8ª LOE, la entidad local podría considerar que el despliegue queda
+sujeto, en lo que a la licencia de obra se refiere, a la mera presentación de una declaración responsable.</li>
+<li>En relación con la licencia de instalación, funcionamiento o actividad, de la lectura de la mencionada
+DA8ª de la LOE puede extraerse que están incluidas en su ámbito de aplicación.</li>
+<li>En relación con el control ambiental aplicable, las redes cableadas se verán sometidas a calificación
+ambiental mediante declaración responsable como trámite ambiental (Cat. 13.57 bis, Anexo I, LGICA).
+Las redes inalámbricas están sujetas, con arreglo a la LGICA, a calificación ambiental (Cat. 13.57, Anexo
+I, LGICA).</li>
+</ol>
+<p>Finalmente, el procedimiento a seguir por parte del promotor del despliegue a fin de poder llevarlo a cabo será el
+siguiente:</p>
+<p><img src="/img/ilustracion10.png" alt=""></p>
+<h4><a class="anchor" aria-hidden="true" id="4432-despliegue-fuera-de-edificaciones"></a><a href="#4432-despliegue-fuera-de-edificaciones" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4.4.3.2 Despliegue fuera de edificaciones</h4>
+<p>En este escenario de despliegue se recomienda emplear los instrumentos de control que se indican en el siguiente
+cuadro, sin perjuicio de las adaptaciones que puedan resultar convenientes en base a las particularidades del
+supuesto de que se trate o de las especialidades de la normativa local.</p>
+<p><img src="/img/tabla15.png" alt=""></p>
+<p>Particularidades del escenario:</p>
+<ol>
+<li>La tutela del patrimonio histórico se realiza mediante la obtención de la correspondiente autorización
+otorgada por el órgano competente en esta materia cuando se trate de bienes inscritos como BIC o su
+entorno (art. 33.3 LPHA); o bien mediante Comunicación a la Consejería competente en materia de
+patrimonio histórico cuando se trate de bienes de catalogación general (art. 33.5 LPHA).</li>
+<li>En relación con el instrumento de control urbanístico, a falta de disposición especial que determine otra
+cosa, puede realizarse por la administración local mediante su sometimiento a la licencia correspondiente
+(art. 169 LOUA).</li>
+<li>En lo que respecta a los instrumentos de control a emplear para el control de la instalación, a falta de
+disposición especial que determine otra cosa, el instrumento de control podría ser la licencia. En relación
+con la licencia de funcionamiento o actividad, con carácter general, el ejercicio de actividades no se
+someterá a la obtención de licencia u otro medio de control preventivo (art. 84 bis LBRL).</li>
+<li>Finalmente, en relación con el control ambiental, las redes cableadas se verán sometidas a calificación
+ambiental mediante declaración responsable como trámite ambiental (Cat. 13.57 bis, Anexo I, LGICA).
+En relación con las redes inalámbricas el instrumento de control sería la calificación ambiental ya que el
+impacto en patrimonio histórico es una de las excepciones a la CA-DR previstas en la Cat. 13.57, Anexo
+I, LGICA.</li>
+</ol>
+<p>El procedimiento a seguir por parte del promotor del despliegue, para el caso de que esté sujeto a licencia, será
+el previsto en el apartado 4.4.2, Ilustración 8.</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/SANDETEL/docs/doc3"><span class="arrow-prev">← </span><span>3. Escenarios generales de despliegue</span></a><a class="docs-next button" href="/SANDETEL/docs/doc5"><span>5. Aprovechamiento de infraestructuras físicas</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#41-actuaciones-de-innovación-tecnológica-o-adaptación-técnica">4.1 Actuaciones de innovación tecnológica o adaptación técnica</a></li><li><a href="#42-despliegues-en-espacios-no-clasificados-como-suelo-urbano">4.2 Despliegues en espacios no clasificados como suelo urbano</a><ul class="toc-headings"><li><a href="#421-suelo-no-urbanizable">4.2.1 Suelo no urbanizable</a></li><li><a href="#422-otros-tipos-de-suelo">4.2.2 Otros tipos de suelo</a></li></ul></li><li><a href="#43-despliegue-en-espacios-naturales-protegidos">4.3 Despliegue en espacios naturales protegidos</a></li><li><a href="#44-despliegues-con-impacto-en-patrimonio-histórico-artístico">4.4 Despliegues con impacto en patrimonio histórico-artístico</a><ul class="toc-headings"><li><a href="#441-actuaciones-de-innovación-tecnológica-o-adaptación-técnica">4.4.1 Actuaciones de innovación tecnológica o adaptación técnica</a></li><li><a href="#442-despliegue-en-dominio-público">4.4.2 Despliegue en dominio público</a></li><li><a href="#443-despliegue-en-propiedad-privada">4.4.3 Despliegue en propiedad privada</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/SANDETEL/" class="nav-home"><img src="/SANDETEL/img/2020-03-17_15h39_07.png" alt="Sociedad Andaluza para el Desarrollo de las Telecomunicaciones S.A. (SANDETEL)" width="66" height="58"/></a><div><h5>Docs</h5><a href="/SANDETEL/docs/en/doc1.html">Getting Started (or other categories)</a><a href="/SANDETEL/docs/en/doc2.html">Guides (or other categories)</a><a href="/SANDETEL/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/SANDETEL/en/users.html">User Showcase</a><a href="https://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/SANDETEL/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><a href="https://opensource.facebook.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/SANDETEL/img/oss_logo.png" alt="Facebook Open Source" width="170" height="45"/></a><section class="copyright">Copyright © 2020 Your Name or Your Company Name</section></footer></div></body></html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>6. Aspectos a tener en cuenta en el despliegue de redes · Sociedad Andaluza para el Desarrollo de las Telecomunicaciones S.A. (SANDETEL)</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;div style=&quot;text-align: justify&quot;&gt;"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="6. Aspectos a tener en cuenta en el despliegue de redes · Sociedad Andaluza para el Desarrollo de las Telecomunicaciones S.A. (SANDETEL)"/><meta property="og:type" content="website"/><meta property="og:url" content="https://ivan.iriondo.github.io/SANDETEL/"/><meta property="og:description" content="&lt;div style=&quot;text-align: justify&quot;&gt;"/><meta property="og:image" content="https://ivan.iriondo.github.io/SANDETEL/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://ivan.iriondo.github.io/SANDETEL/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/SANDETEL/img/2020-03-17_15h39_07.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/SANDETEL/js/scrollSpy.js"></script><link rel="stylesheet" href="/SANDETEL/css/main.css"/><script src="/SANDETEL/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/SANDETEL/"><img class="logo" src="/SANDETEL/img/2020-03-17_15h39_07.png" alt="Sociedad Andaluza para el Desarrollo de las Telecomunicaciones S.A. (SANDETEL)"/><h2 class="headerTitleWithLogo">Sociedad Andaluza para el Desarrollo de las Telecomunicaciones S.A. (SANDETEL)</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/SANDETEL/docs/doc1" target="_self">Docs</a></li><li class=""><a href="/SANDETEL/help" target="_self">Help</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Índice</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Índice</h3><ul class=""><li class="navListItem"><a class="navItem" href="/SANDETEL/docs/doc1">1. Introducción</a></li><li class="navListItem"><a class="navItem" href="/SANDETEL/docs/doc2">2. Infraestructuras de redes de acceso a servicios de banda ancha</a></li><li class="navListItem"><a class="navItem" href="/SANDETEL/docs/doc3">3. Escenarios generales de despliegue</a></li><li class="navListItem"><a class="navItem" href="/SANDETEL/docs/doc4">4. Escenarios especiales</a></li><li class="navListItem"><a class="navItem" href="/SANDETEL/docs/doc5">5. Aprovechamiento de infraestructuras físicas</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/SANDETEL/docs/doc6">6. Aspectos a tener en cuenta en el despliegue de redes</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">6. Aspectos a tener en cuenta en el despliegue de redes</h1></header><article><div><span><div style="text-align: justify">
+<p>Se ponen de manifiesto a continuación, una serie de aspectos relacionados con el despliegue de redes a los que
+están sujetas las entidades locales y que por su novedad o relevancia merecen ser destacados.</p>
+<p><strong>Jerarquía de fuentes:</strong></p>
+<p>La adquisición de los derechos de ocupación del dominio público o de la propiedad privada necesarios para la
+explotación de redes y para la prestación de servicios de comunicaciones electrónicas deberá realizarse conforme
+a lo dispuesto en la LGTEL y en lo no contemplado en la misma por su normativa específica (artículo 5.2 de la
+LGTEL).</p>
+<p><strong>Transparencia en materia de procedimientos de concesión de permisos:</strong></p>
+<p>Las Administraciones Públicas deben publicar en su página web toda la información relativa a las condiciones y
+procedimientos aplicables para la instalación y despliegue de redes públicas de comunicaciones electrónicas y sus
+recursos asociados.</p>
+<p>Además, las Administraciones Públicas deben comunicar a la SEAV la página web donde se contiene dicha
+información y la comunicación debe realizarse a través de un espacio específicamente habilitado en la página web
+de la SEAV (artículo 9 del RD 330/2016).</p>
+<p>La Resolución de 30 de mayo de 2019, de la SEAV (BOE núm. 150, de 24 de junio de 2019), especifica la
+dirección electrónica del espacio habilitado en la web de la SEAV para realizar la comunicación.</p>
+<p>Cada Administración Pública deberá comunicar, a través de dicho espacio, el enlace a la dirección web en la que
+tiene publicada la información relativa a las condiciones y procedimientos aplicables para la instalación y
+despliegue de redes públicas de comunicaciones electrónicas y sus recursos asociados.</p>
+<p><strong>Solicitud de información a los operadores:</strong></p>
+<p>Las administraciones públicas solo pueden solicitar a los operadores la información que sea necesaria en el
+ejercicio de sus competencias. Dicha información debe ser recabada de las Autoridades Nacionales de
+Reglamentación. Cuando no se obtenga de dichas Autoridades podrán solicitar dicha información en materia de
+telecomunicaciones de los operadores (artículo 10.2 LGTEL).</p>
+<p><strong>Derecho de ocupación del dominio público:</strong></p>
+<p>Los operadores tienen derecho a la ocupación del dominio público en la medida en que ello sea necesario para el
+establecimiento de la red pública de comunicaciones electrónicas de que se trate (artículo 30 LGTEL).</p>
+<p><strong>Imposición de la compartición de la propiedad pública o privada:</strong></p>
+<p>Cuando las entidades locales consideren que por razones de medio ambiente, salud pública, seguridad pública u
+ordenación urbana y territorial procede imponer a los operadores la utilización compartida del dominio público o
+la propiedad privada, podrán instar de manera motivada al Ministerio de Economía y Empresa (MIEE) el inicio del
+procedimiento establecido para imponer dicha compartición (artículo 32.2 LGTEL).</p>
+<p><strong>Naturaleza de las redes desde la perspectiva urbanística:</strong></p>
+<p>Las redes públicas de comunicaciones electrónicas constituyen equipamiento de carácter básico y su previsión en
+los instrumentos de planificación urbanística tiene el carácter de determinaciones estructurantes. Su instalación y
+despliegue constituyen obras de interés general (artículo 34.2 LGTEL).</p>
+<p><strong>Normativa aprobada por las entidades locales y sus instrumentos de planificación:</strong></p>
+<p>La normativa elaborada por las administraciones públicas que afecte al despliegue de las redes y los instrumentos
+de planificación deberán recoger las disposiciones necesarias para impulsar o facilitar el despliegue de
+infraestructuras de redes de comunicaciones electrónicas en su ámbito territorial, en particular, para garantizar la
+disponibilidad de una oferta suficiente de lugares y espacios físicos en los que los operadores decidan ubicar sus
+infraestructuras (artículo 34.3 LGTEL).</p>
+<p><strong>Restricciones absolutas o desproporcionadas:</strong></p>
+<p>Las entidades locales, en su normativa propia, así como en los instrumentos de planificación que afecten al
+despliegue de redes no podrán establecer restricciones absolutas o desproporcionadas al derecho de ocupación
+del dominio (artículo 34.3 LGTEL).</p>
+<p><strong>Despliegues aéreos o por fachadas:</strong></p>
+<p>En los casos en los que no existan canalizaciones subterráneas o en el interior de las edificaciones que permitan
+el despliegue y explotación de redes públicas de comunicaciones electrónicas, los operadores podrán efectuar
+despliegues aéreos siguiendo los previamente existentes y despliegues por fachadas de cables y equipos, usando,
+en la medida de lo posible, los despliegues, canalizaciones, instalaciones y equipos previamente instalados.</p>
+<p>Cuando se trate de casos justificados de edificaciones del patrimonio histórico-artístico o que puedan afectar a la
+seguridad pública, las entidades locales podrán limitar los despliegues aéreos y por fachadas de redes de
+comunicaciones electrónicas (artículo 34.5 LGTEL).</p>
+<p><strong>Proyectos de urbanización:</strong></p>
+<p>Cuando se acometan proyectos de urbanización, el proyecto técnico de urbanización deberá prever la instalación
+de infraestructura de obra civil para facilitar el despliegue de las redes públicas de comunicaciones electrónicas.</p>
+<p>Las infraestructuras que se instalen para facilitar el despliegue de las redes públicas de comunicaciones
+electrónicas conforme al párrafo anterior formarán parte del conjunto resultante de las obras de urbanización y
+pasarán a integrarse en el dominio público municipal. La administración pública titular de dicho dominio público
+pondrá tales infraestructuras a disposición de los operadores interesados en condiciones de igualdad,
+transparencia y no discriminación (artículo 36.1 LGTEL).</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/SANDETEL/docs/doc5"><span class="arrow-prev">← </span><span>5. Aprovechamiento de infraestructuras físicas</span></a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/SANDETEL/" class="nav-home"><img src="/SANDETEL/img/2020-03-17_15h39_07.png" alt="Sociedad Andaluza para el Desarrollo de las Telecomunicaciones S.A. (SANDETEL)" width="66" height="58"/></a><div><h5>Docs</h5><a href="/SANDETEL/docs/en/doc1.html">Getting Started (or other categories)</a><a href="/SANDETEL/docs/en/doc2.html">Guides (or other categories)</a><a href="/SANDETEL/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/SANDETEL/en/users.html">User Showcase</a><a href="https://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/SANDETEL/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><a href="https://opensource.facebook.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/SANDETEL/img/oss_logo.png" alt="Facebook Open Source" width="170" height="45"/></a><section class="copyright">Copyright © 2020 Your Name or Your Company Name</section></footer></div></body></html>

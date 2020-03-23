@@ -1,0 +1,164 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>2. Infraestructuras de redes de acceso a servicios de banda ancha · Sociedad Andaluza para el Desarrollo de las Telecomunicaciones S.A. (SANDETEL)</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;div style=&quot;text-align: justify&quot;&gt;"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="2. Infraestructuras de redes de acceso a servicios de banda ancha · Sociedad Andaluza para el Desarrollo de las Telecomunicaciones S.A. (SANDETEL)"/><meta property="og:type" content="website"/><meta property="og:url" content="https://ivan.iriondo.github.io/SANDETEL/"/><meta property="og:description" content="&lt;div style=&quot;text-align: justify&quot;&gt;"/><meta property="og:image" content="https://ivan.iriondo.github.io/SANDETEL/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://ivan.iriondo.github.io/SANDETEL/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/SANDETEL/img/2020-03-17_15h39_07.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/SANDETEL/js/scrollSpy.js"></script><link rel="stylesheet" href="/SANDETEL/css/main.css"/><script src="/SANDETEL/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/SANDETEL/"><img class="logo" src="/SANDETEL/img/2020-03-17_15h39_07.png" alt="Sociedad Andaluza para el Desarrollo de las Telecomunicaciones S.A. (SANDETEL)"/><h2 class="headerTitleWithLogo">Sociedad Andaluza para el Desarrollo de las Telecomunicaciones S.A. (SANDETEL)</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/SANDETEL/docs/doc1" target="_self">Docs</a></li><li class=""><a href="/SANDETEL/help" target="_self">Help</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Índice</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Índice</h3><ul class=""><li class="navListItem"><a class="navItem" href="/SANDETEL/docs/doc1">1. Introducción</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/SANDETEL/docs/doc2">2. Infraestructuras de redes de acceso a servicios de banda ancha</a></li><li class="navListItem"><a class="navItem" href="/SANDETEL/docs/doc3">3. Escenarios generales de despliegue</a></li><li class="navListItem"><a class="navItem" href="/SANDETEL/docs/doc4">4. Escenarios especiales</a></li><li class="navListItem"><a class="navItem" href="/SANDETEL/docs/doc5">5. Aprovechamiento de infraestructuras físicas</a></li><li class="navListItem"><a class="navItem" href="/SANDETEL/docs/doc6">6. Aspectos a tener en cuenta en el despliegue de redes</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">2. Infraestructuras de redes de acceso a servicios de banda ancha</h1></header><article><div><span><div style="text-align: justify">
+<p>Los despliegues de redes de banda ancha, en la medida en que hacen imprescindible la utilización de
+infraestructuras físicas que deben localizarse en el dominio público o en propiedad privada, tienen un claro impacto
+en el territorio. En este apartado se pretende dar un breve repaso a las tipologías de redes de telecomunicaciones
+más comunes, poniendo el foco en las infraestructuras físicas que sirven de soporte a cada una de ellas, ya que
+este será un elemento relevante a la hora de determinar los instrumentos de control aplicables al despliegue. El
+análisis se realiza fundamentalmente en el tramo de red conocido como “red de acceso” (aquel más cercano al
+cliente final del servicio), por ser el de mayor impacto en el ámbito municipal y el que más complejidad y
+problemática suele presentar. Ello no excluye que las consideraciones y soluciones que se presentan a lo largo de
+esta guía puedan aplicarse igualmente a tramos de red troncal que discurran dentro del término municipal, en
+función de las características del despliegue y de la zona afectada.</p>
+<p>Igualmente, es posible que en ciertas situaciones un operador utilice soluciones híbridas para dar servicio al
+municipio, combinando varias de las tipologías de acceso que se presentan a continuación. En tal caso sería
+necesario analizar cada una de las tipologías de infraestructuras de manera independiente a los efectos de la
+determinación del régimen jurídico e instrumento de control a aplicar.</p>
+<p>Finalmente, debe tenerse en cuenta que no es objeto de este apartado la descripción de características técnicas,
+estándares, parámetros de servicio o aspectos relacionados con la calidad del servicio, aspectos todos ellos que
+quedan fuera de los objetivos de este documento.</p>
+<h2><a class="anchor" aria-hidden="true" id="21-infraestructuras-de-redes-cableadas"></a><a href="#21-infraestructuras-de-redes-cableadas" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2.1 Infraestructuras de redes cableadas</h2>
+<p>A los efectos de esta guía se entienden por redes cableadas a las redes de comunicaciones electrónicas, cualquiera
+que sea el servicio que presten (telefonía, internet, televisión, etc.) que conectan todos los elementos que forman
+parte de la red empleando elementos físicos. Las tecnologías típicas de redes cableadas son xDSL, cable o HFC,
+y fibra óptica hasta el hogar (FTTH). A pesar de que cada una de las tecnologías indicadas pueden tener sus
+particularidades en relación con los elementos de infraestructura, y con el entorno en que tenga lugar el despliegue,
+la siguiente ilustración recoge los principales componentes físicos de una red de acceso cableada:</p>
+<p><img src="/img/ilustracion1.png" alt=""></p>
+<p>En este tipo de red, la red de acceso lleva el cableado desde la central que da servicio a la zona (marcada en
+verde) hasta el hogar del abonado. Para ello este último tramo de la red se divide típicamente en tres subsecciones:
+alimentación, distribución y dispersión.</p>
+<p>La <strong>red de alimentación</strong> es el tramo de la red de acceso que va desde la salida de central hasta un punto de
+interconexión, o hasta el comienzo de una canalización lateral o hasta la salida lateral a poste, fachada o interior
+de edificio. Se compone de cables de gran capacidad y discurre por la conocida como canalización principal. De
+manera general las actuaciones para desplegar la red de alimentación consisten en ubicar canalizaciones
+soterradas en dominio público que albergarán los cables, con registros en cada cambio de dirección o bifurcación
+y cada cierta distancia para su correcta manipulación, registro, realización de empalmes, derivaciones, etc. Estos
+registros se efectuarán mediante arquetas o cámaras de registro de hormigón prefabricadas, o ejecutadas in situ.
+Si ya existen canalizaciones existentes (ya sean pertenecientes a redes de telecomunicaciones o a otro tipo de
+redes), en ciertas condiciones podrían utilizarse o compartirse las mismas para el despliegue de red, evitando la
+realización de nuevas obras.</p>
+<p>La <strong>red de distribución</strong> es el tramo de red de acceso que va desde el punto de interconexión (o desde el comienzo
+de una canalización lateral o salida lateral) de la red de alimentación hasta el inicio de la red de dispersión. Suele
+terminar en una caja terminal ubicada en fachada o en la arqueta de ICT, en aquellos edificios que dispongan de
+la misma. En los casos en los que el despliegue de las redes de alimentación y distribución no pueda realizarse
+de manera soterrada, suele realizarse por postes y/o por despliegue en fachada, pudiendo necesitarse en algunos
+tramos el uso de cruces aéreos entre aceras de la misma calle.</p>
+<p>Finalmente, la <strong>red de dispersión</strong> es el tramo de red de acceso que va desde la caja terminal hasta el usuario final
+que contrata el servicio. Típicamente discurre por fachadas o el interior de edificios, y termina en el RITI, cuando
+exista ICT, o en el interior de la vivienda cuando no la hay.</p>
+<p>En los edificios de los potenciales clientes irán instalados los equipos terminales de red, que podrán ser instalados
+en fachada, mediante cajas normalizadas por los operadores a partir de las cuales se tiendan las acometidas
+cableadas individuales a cada una de las viviendas que contrate el servicio, o bien se instalarán en el interior de
+los edificios pudiendo dar servicio a cada una de las viviendas que lo contrate mediante cableado tendido a lo largo
+de canalizaciones y cajas de distribución/derivación tendidas en el interior de dichos edificios.</p>
+<p>Por tanto, el principal impacto de este tipo de despliegues en el término municipal viene dado por la necesidad de
+realizar obras para instalar canalizaciones subterráneas (habitualmente en dominio público), y por la instalación
+de elementos y cableado en fachada de edificios y postes. Ocasionalmente podría ser necesario realizar cruces
+aéreos entre las aceras de la misma calle, si estuviera permitido por la normativa local.</p>
+<h2><a class="anchor" aria-hidden="true" id="22-infraestructuras-de-redes-inalámbricas-de-acceso-fijo"></a><a href="#22-infraestructuras-de-redes-inalámbricas-de-acceso-fijo" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2.2 Infraestructuras de redes inalámbricas de acceso fijo</h2>
+<p>Se entiende por redes inalámbricas de acceso fijo aquellas que proporcionan conectividad al cliente sin requerir
+una conexión por cable hasta el terminal del usuario, dado que la comunicación se produce de forma inalámbrica
+(a través de ondas electromagnéticas) entre la estación emisora y un equipo fijo receptor. A efectos de
+infraestructuras para esta red de acceso, la arquitectura es más sencilla que para redes cableadas ya que solo
+requiere de un centro emisor (torre o mástil, con las antenas y el equipamiento activo necesario) y de una
+instalación en el edificio del cliente (fachada, cubierta de edificio o similar).</p>
+<p>Desde el punto de vista de la transmisión, los emplazamientos radioeléctricos podrán ser de construcción exenta
+o bien ocupar zonas en las cubiertas de edificios para albergar las antenas y equipamiento necesarios. En el caso
+más común, los emplazamientos consisten en una torre para soportar las antenas, que irán cableadas hasta un
+registro ubicado en la base de la misma (bien en una caja en intemperie adosada a la propia torre o en una caseta
+construida junto a la misma) donde se instalarán equipos activos para las instalaciones eléctricas y mecánicas.
+En el caso de emplazamientos sobre las cubiertas de edificios estas instalaciones se podrán ubicar en intemperie
+junto a la torre o mástil, o bien en una de las plantas del propio edificio. En el caso de un emplazamiento exento
+sobre suelo se suele instalar una caseta ubicada junto a la torre; cuando fuera necesario se utilizará vallado
+perimetral de protección.</p>
+<p>Desde el punto de vista de la recepción la instalación consta únicamente de una antena receptora ubicada en el
+edificio afectado, encargada de captar la señal de manera inalámbrica y de conducirla de manera cableada hasta
+el equipamiento de cliente (por ejemplo, un router).</p>
+<p><img src="/img/ilustracion2.png" alt=""></p>
+<p>Las tecnologías fijas inalámbricas suelen usarse por operadores para proveer acceso a Internet en aquellas áreas
+donde no existe acceso a través de redes tradicionales de pares de cobre, cable o fibra óptica, y las más comunes
+son las tecnologías Wi-Fi y WiMAX, aunque también se dan casos de instalaciones fijas inalámbricas mediante
+tecnología 4G/LTE. Un caso particular de este tipo de redes puede considerarse las redes de acceso a internet (o
+a contenidos audiovisuales) por satélite; a efectos de instalaciones únicamente hay que considerar la antena
+parabólica de recepción, que se instale en el edificio de cliente que capta la señal y la conduce hasta el interior
+del hogar.</p>
+<p>Desde el punto de vista del impacto en las tareas de los técnicos municipales, las actuaciones más típicas suelen
+estar asociadas al montaje de torres y despliegue de equipamiento de transmisión, tanto en suelo como en azoteas
+de edificios (públicos y privados). A veces estas instalaciones requieren de conexión a la red troncal por medios
+cableados, por lo que podrían darse algunas actuaciones típicas de redes cableadas.</p>
+<h2><a class="anchor" aria-hidden="true" id="23-infraestructuras-de-redes-inalámbricas-de-acceso-móvil"></a><a href="#23-infraestructuras-de-redes-inalámbricas-de-acceso-móvil" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2.3 Infraestructuras de redes inalámbricas de acceso móvil</h2>
+<p>Estas redes permiten accesos inalámbricos, es decir, sin requerimiento de cables, a servicios de
+telecomunicaciones (voz y banda ancha) y permitiendo una movilidad prácticamente plena al usuario. Esta
+movilidad se consigue mediante la disposición de una red de múltiples estaciones base (normalmente exteriores)
+de tal forma que el usuario tenga cobertura en una zona mucho más amplia que la que conseguiría con un solo
+emplazamiento de transmisión. El despliegue de redes de comunicaciones móviles requiere normalmente de un
+número superior de estaciones radioeléctricas emisoras en entornos urbanos si se compara con servicios fijos
+inalámbricos, especialmente si se desea incrementar la velocidad de acceso de los usuarios a la red.</p>
+<p>Desde el punto de vista de infraestructuras necesarias que impacten en el término municipal únicamente se
+consideran las necesarias para la transmisión de la señal, no siendo necesaria en este caso la instalación de
+equipamiento fijo de recepción en el edificio del cliente. Pueden trasladarse a este ámbito las consideraciones
+realizadas para las infraestructuras de transmisión de redes de acceso fijas inalámbricas (es decir, mástil o torre
+ubicada en suelo o cubierta, con el equipamiento de telecomunicaciones, de suministro eléctrico y de acceso y
+seguridad necesarios, ya sea en dominio público o propiedad privada).</p>
+<p>Las tecnologías de comunicaciones móviles más comunes son las conocidas 3G (UMTS) y 4G (LTE). Se hace notar
+que en un futuro cercano se comenzará con el despliegue de redes 5G para las que se estima que será necesario
+incrementar de manera considerable el número de estaciones base que prestan el servicio; muchas de ellas serán
+de un tamaño menor a las que se utilizan actualmente, por lo que podrían instalarse en fachadas de edificios,
+farolas y mobiliario urbano.</p>
+</div></span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/SANDETEL/docs/doc1"><span class="arrow-prev">← </span><span>1. Introducción</span></a><a class="docs-next button" href="/SANDETEL/docs/doc3"><span>3. Escenarios generales de despliegue</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#21-infraestructuras-de-redes-cableadas">2.1 Infraestructuras de redes cableadas</a></li><li><a href="#22-infraestructuras-de-redes-inalámbricas-de-acceso-fijo">2.2 Infraestructuras de redes inalámbricas de acceso fijo</a></li><li><a href="#23-infraestructuras-de-redes-inalámbricas-de-acceso-móvil">2.3 Infraestructuras de redes inalámbricas de acceso móvil</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/SANDETEL/" class="nav-home"><img src="/SANDETEL/img/2020-03-17_15h39_07.png" alt="Sociedad Andaluza para el Desarrollo de las Telecomunicaciones S.A. (SANDETEL)" width="66" height="58"/></a><div><h5>Docs</h5><a href="/SANDETEL/docs/en/doc1.html">Getting Started (or other categories)</a><a href="/SANDETEL/docs/en/doc2.html">Guides (or other categories)</a><a href="/SANDETEL/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/SANDETEL/en/users.html">User Showcase</a><a href="https://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/SANDETEL/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><a href="https://opensource.facebook.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/SANDETEL/img/oss_logo.png" alt="Facebook Open Source" width="170" height="45"/></a><section class="copyright">Copyright © 2020 Your Name or Your Company Name</section></footer></div></body></html>

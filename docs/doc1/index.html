@@ -1,0 +1,213 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>1. Introducción · Sociedad Andaluza para el Desarrollo de las Telecomunicaciones S.A. (SANDETEL)</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;div style=&quot;text-align: justify&quot;&gt;"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="1. Introducción · Sociedad Andaluza para el Desarrollo de las Telecomunicaciones S.A. (SANDETEL)"/><meta property="og:type" content="website"/><meta property="og:url" content="https://ivan.iriondo.github.io/SANDETEL/"/><meta property="og:description" content="&lt;div style=&quot;text-align: justify&quot;&gt;"/><meta property="og:image" content="https://ivan.iriondo.github.io/SANDETEL/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://ivan.iriondo.github.io/SANDETEL/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/SANDETEL/img/2020-03-17_15h39_07.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/SANDETEL/js/scrollSpy.js"></script><link rel="stylesheet" href="/SANDETEL/css/main.css"/><script src="/SANDETEL/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/SANDETEL/"><img class="logo" src="/SANDETEL/img/2020-03-17_15h39_07.png" alt="Sociedad Andaluza para el Desarrollo de las Telecomunicaciones S.A. (SANDETEL)"/><h2 class="headerTitleWithLogo">Sociedad Andaluza para el Desarrollo de las Telecomunicaciones S.A. (SANDETEL)</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive siteNavItemActive"><a href="/SANDETEL/docs/doc1" target="_self">Docs</a></li><li class=""><a href="/SANDETEL/help" target="_self">Help</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Índice</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Índice</h3><ul class=""><li class="navListItem navListItemActive"><a class="navItem" href="/SANDETEL/docs/doc1">1. Introducción</a></li><li class="navListItem"><a class="navItem" href="/SANDETEL/docs/doc2">2. Infraestructuras de redes de acceso a servicios de banda ancha</a></li><li class="navListItem"><a class="navItem" href="/SANDETEL/docs/doc3">3. Escenarios generales de despliegue</a></li><li class="navListItem"><a class="navItem" href="/SANDETEL/docs/doc4">4. Escenarios especiales</a></li><li class="navListItem"><a class="navItem" href="/SANDETEL/docs/doc5">5. Aprovechamiento de infraestructuras físicas</a></li><li class="navListItem"><a class="navItem" href="/SANDETEL/docs/doc6">6. Aspectos a tener en cuenta en el despliegue de redes</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">1. Introducción</h1></header><article><div><span><div style="text-align: justify">
+<p>Las competencias que afectan al despliegue de redes de comunicaciones electrónicas están distribuidas en tres
+niveles según su ámbito territorial de competencias: el estatal, el autonómico y el local. Como consecuencia de
+ello, el régimen jurídico aplicable a dicho despliegue desde la perspectiva de las entidades locales, cuyo papel es
+imprescindible en esta materia, se caracteriza por su complejidad y en ocasiones por una aparente falta de
+coordinación y de coherencia entre algunas de las disposiciones que forman parte del marco jurídico aplicable.</p>
+<p>En la medida en que las redes de comunicaciones electrónicas están soportadas sobre infraestructuras físicas que
+se despliegan sobre el territorio, los municipios juegan un papel fundamental en esta materia. Dicho de otro modo,
+los municipios tienen atribuidas competencias específicas sobre materias que, no siendo las telecomunicaciones,
+están relacionadas con las mismas, como son el urbanismo, la gestión del dominio público de su titularidad o la
+protección del medio ambiente. A ellos corresponde la adopción de medidas dirigidas a preservar el entorno urbano
+y rural de una inadecuada saturación o desorden provocado por las infraestructuras de telecomunicaciones, o a
+evitar el menoscabo del patrimonio histórico y del medio ambiente que pueda producirse.</p>
+<p>Por otro lado, a la vista del crecimiento exponencial del tráfico de banda ancha y del aumento de la demanda de
+servicios, las entidades locales deben estar preparadas para abordar un proceso en el que será necesaria tanto la
+instalación de nuevas infraestructuras como la promoción de un mejor aprovechamiento de las infraestructuras ya
+existentes.</p>
+<p>La Dirección General de Economía Digital e Innovación tiene entre sus objetivos el de promover las condiciones
+que faciliten el despliegue ordenado, coordinado y eficiente de las redes de telecomunicaciones en el territorio
+andaluz. El marco estratégico en el que la Dirección General desarrolla las actividades dirigidas al logro de este
+objetivo es la Estrategia de Infraestructuras de Telecomunicaciones de Andalucía 20201, y una de las herramientas
+puestas al servicio del mismo es Consulta Teleco2, la oficina de asesoramiento de telecomunicaciones para las
+administraciones locales andaluzas que, entre otras funciones, atiende las consultas que formulan los
+Ayuntamientos andaluces en materia de despliegue de redes. Por todo lo anterior se ha considerado recomendable
+que las EELL de Andalucía dispongan de medios que faciliten el acceso al régimen jurídico de aplicación de un
+modo coherente y sencillo, a fin de desarrollar adecuadamente las competencias que a ellas corresponden en
+relación con el despliegue de redes de comunicaciones electrónicas.</p>
+<p>Esta guía pretende dar respuesta a dicha finalidad presentando el marco normativo aplicable al despliegue de
+redes de comunicaciones electrónicas de un modo integrado, es decir, teniendo en cuenta no solo el régimen
+establecido en la legislación dictada sobre la materia por la Administración General del Estado, titular de las
+competencias exclusivas en materia de telecomunicaciones, sino también las especialidades propias del régimen
+aplicable al despliegue de redes en la Comunidad Autónoma de Andalucía. Tanto la Junta de Andalucía como las
+administraciones locales están investidas de competencias que operan sobre el mismo objeto jurídico, las redes
+de telecomunicaciones, pero desde diferentes perspectivas a la que corresponde al Estado (el mencionado
+urbanismo, el medio ambiente o la tutela del patrimonio histórico).</p>
+<p>El objetivo fundamental de esta guía es facilitar a los técnicos municipales la identificación de los instrumentos de
+control a los que debe quedar sujeto el despliegue de redes, teniendo en cuenta los posibles escenarios y variables
+que concurren en la práctica real y que se han identificado como los más relevantes entre las variadas casuísticas
+posibles. Además, se han incorporado una serie de procedimientos asociados a situaciones particulares que, por
+su naturaleza especial, pueden ser objeto de un interés específico por parte de los responsables municipales en
+el momento de abordar la tramitación de expedientes relativos a esta tipología de despliegue.</p>
+<p>En lo que respecta a su estructura, la guía cuenta con cinco apartados. El primero de ellos, realiza una introducción
+que incluye consideraciones generales acerca del ámbito de aplicación de la guía y de su diseño metodológico, así
+como acerca de los destinatarios y el modo de utilizar esta guía.</p>
+<p>En el segundo apartado se realiza una breve descripción de las infraestructuras que, con frecuencia, dan soporte
+a las redes de telecomunicaciones que se despliegan en el ámbito municipal y cuyo impacto en el territorio las
+hace relevantes, de manera que los técnicos municipales que carezcan de formación específica en esta disciplina
+puedan conocer los principales elementos físicos de los que constan las diversas tipologías de redes.</p>
+<p>El tercer apartado se centra en los principales escenarios en los que el despliegue de redes puede producirse, sus
+particularidades y los instrumentos de control que proceden en cada caso particular teniendo en cuenta las
+características del despliegue.
+El apartado cuarto aborda el análisis de los procedimientos que aplican a los supuestos especiales y en el quinto
+se realizan una serie de consideraciones acerca del aprovechamiento de infraestructuras físicas para el despliegue
+de redes, en base principalmente a los preceptos contenidos en el Real Decreto 330/2016.3</p>
+<p>Por último, en el apartado sexto se ponen de manifiesto una serie de aspectos relacionados con el despliegue de
+redes y la normativa que les resulta de aplicación, que por su novedad o relevancia merecen ser destacados.</p>
+<p>Esta guía constituye una herramienta de apoyo. Se trata de un documento que pretende ser meramente orientativo
+y que estará sujeto a las adaptaciones que resulten necesarias en base a las circunstancias particulares que
+concurran en el supuesto concreto para el que se considere adecuado su uso o en la normativa que le resulte de
+aplicación.</p>
+<p>Finalmente, como consecuencia del dinamismo y la continua evolución que caractarizan al sector de las
+telecomunicaciones, el contexto normativo que le resulta de aplicación es cambiante. De este modo, el contenido
+de la guía, sin perjuicio de que las alusiones a normas específicas que se contengan en la misma, puedan
+extenderse a aquellas otras que, por nueva promulgación, puedan sustituir, modificar o completar tales normas,
+puede ser objeto de actualización cuando resulte procedente.</p>
+<h2><a class="anchor" aria-hidden="true" id="11-ámbito-de-aplicación"></a><a href="#11-ámbito-de-aplicación" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1.1 Ámbito de aplicación</h2>
+<p>El ámbito de aplicación de la presente guía incluye los aspectos relativos al despliegue de redes públicas de
+comunicaciones electrónicas que tienen impacto en la ordenación urbanística, del patrimonio histórico o
+medioambiental.</p>
+<p>No son, en consecuencia, objeto de consideración en este documento los siguientes supuestos:</p>
+<ul>
+<li><p>Las Infraestructuras Comunes de Telecomunicaciones y, en general, aquellas instalaciones que resulten
+necesarias para el despliegue de las redes en el interior de los edificios.</p></li>
+<li><p>Las instalaciones de radiocomunicación catalogadas de radioaficionados ni las antenas receptoras de
+radiodifusión y televisión que, por no constituir redes públicas de comunicaciones electrónicas, no disfrutan
+de determinados privilegios de los que el ordenamiento dota a las redes públicas de cara a la ocupación del
+territorio, estando sujetas por tanto a un régimen jurídico especial.</p></li>
+<li><p>Las instalaciones de radiocomunicación para la defensa nacional, seguridad pública y protección civil que, por
+estar relacionados con la prestación de servicios públicos esenciales, se rigen por su normativa específica.</p></li>
+<li><p>Los instrumentos de control aplicables al despliegue de redes públicas de comunicaciones electrónicas que,
+por corresponderse con materias que son competencia exclusiva del Estado, exceden de la actividad propia
+de las EELL, tales como la administración y gestión del espectro radioeléctrico, los límites de exposición a
+emisiones radioeléctricas o el procedimiento de habilitación de puesta en servicio de estaciones
+radioeléctricas.</p></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="12-diseño-metodológico"></a><a href="#12-diseño-metodológico" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1.2 Diseño metodológico</h2>
+<p>El contenido de esta guía es el resultado de un ejercicio de análisis destinado a responder a las exigencias derivadas
+del marco jurídico estatal y autonómico aplicable al despliegue de redes en su conjunto. Como consecuencia de
+este análisis se han identificado los principales escenarios en los que tiene lugar el despliegue de redes y en los
+que concurren especialidades relativas al régimen aplicable.</p>
+<p>Los escenarios que se han tomado como punto de partida, dadas las diferencias de régimen aplicables, son los
+despliegues que tienen lugar en emplazamientos o terrenos de dominio público por un lado, y aquellos otros que
+se producen en espacios de propiedad privada. Dentro de cada uno de ellos el elemento fundamental que se ha
+incorporado para la diferenciación de los escenarios ha sido la tipología de la red (cableada o inalámbrica). De
+este modo los escenarios fundamentales en los que tiene lugar el despliegue de redes que se han considerado
+son los siguientes:</p>
+<p><img src="/img/2020-03-17_10h18_44.png" alt=""></p>
+<p>Dentro de cada uno de los escenarios, se han identificado en un segundo nivel una serie de ámbitos cuya
+descripción y diseño responde al objetivo de que puedan ser leídos y consultados de manera independiente, sin
+necesidad de abordar la lectura de la guía en su conjunto. De este modo las EELL, a la vista de un supuesto de
+hecho que tenga lugar en su ámbito territorial de competencias, podrán confrontar dicha situación con el ámbito
+de despliegue que le corresponda de esta guía y obtener así una recomendación sobre el instrumento de control
+a aplicar, la normativa aplicable y las cuestiones fundamentales a tener en cuenta en ese supuesto.</p>
+<p>Han merecido una consideración particular, como escenarios especiales, los despliegues que tienen lugar en suelo
+no urbanizable, en espacios naturales protegidos y en bienes de interés cultural o sus entornos. Estos supuestos,
+dado su peculiar régimen jurídico y su práctico desconocimiento por la legislación sectorial de telecomunicaciones,
+tienen en esta guía un apartado especial, cuya consulta se puede hacer de igual forma de un modo independiente
+cuando concurra el supuesto práctico que encaje con ellos.</p>
+<p>Sin perjuicio de que la guía, salvo que expresamente se indique de otro modo, establece el régimen aplicable a
+los despliegues que tengan lugar en el suelo urbano, se han tenido en cuenta las diversas modalidades de suelo
+derivadas de la clasificación que realiza la legislación urbanística en Andalucía. Las particularidades que concurran
+en el régimen aplicable al despliegue de redes en base a la tipología de suelo en el que se produce, serán aclaradas
+en un apartado específico incluido al efecto.</p>
+<p>Pese a que esta guía realiza una enumeración de todos los supuestos derivados de la combinación de las variables
+que se han tenido en cuenta para configurar los escenarios, los supuestos de despliegue de redes que, con
+frecuencia, van a ser objeto de tratamiento por parte de las EELL, serán recurrentes en la práctica: supuestos tales
+como estaciones radioeléctricas en cubiertas de edificios o redes cableadas desplegadas en dominio público o en
+edificaciones privadas. Éstos supondrán la mayoría de los supuestos a los que las entidades locales tendrán que
+dar respuesta. Otros como el despliegue de redes cableadas en propiedad privada fuera de edificaciones no
+tendrán, sin embargo, aplicación en la práctica o dicha aplicación estará muy limitada.</p>
+<h2><a class="anchor" aria-hidden="true" id="13-destinatarios-y-método-de-utilización"></a><a href="#13-destinatarios-y-método-de-utilización" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1.3 Destinatarios y método de utilización</h2>
+<p>Sin perjuicio de que el contenido de la guía pueda resultar útil a cualquiera de los agentes que se pueda ver
+afectado por el despliegue de redes de comunicaciones electrónicas, su destinatario principal son las EELL de
+Andalucía.</p>
+<p>Entre los objetivos perseguidos al elaborar esta guía se encuentra el de diseñar una obra con una estructura clara
+y sencilla, que emplee un lenguaje fácil, especialmente en aquellos aspectos más técnicos y propios del sector
+que se trata. Se ha pretendido que la guía ofrezca soluciones breves, claras y comprensibles sobre los diferentes
+aspectos que afectan al despliegue de redes, evitando las descripciones exhaustivas y estando dichas soluciones
+siempre sustentadas por una disposición normativa u otra fuente de derecho. En aquellos supuestos en los que
+resulten imprescindibles aclaraciones más detalladas o existan casuísticas excepcionales no cubiertas por la
+presente guía, las EELL pueden acudir al servicio de asesoramiento que la Junta de Andalucía pone a su disposición
+a través de la oficina Consulta Teleco.</p>
+<p>Los pasos a seguir para el uso de la guía son los siguientes:</p>
+<ol>
+<li>Recepción y tratamiento de un supuesto de despliegue en la entidad local.</li>
+<li>Confrontación del supuesto de hecho con las distintas situaciones especiales de despliegue que se
+relacionan en el apartado 4 de la guía.</li>
+<li>De no encontrarse el supuesto de hecho en ninguna de las situaciones contempladas en el apartado 4,
+confrontación del mismo con los distintos escenarios y ámbitos de despliegue que se enumeran en el
+apartado 3, los supuestos generales.</li>
+<li>Determinación, en base a la recomendación que se indique en el escenario con el que el supuesto haya
+encontrado su encaje y a las propias ordenanzas municipales, del instrumento o instrumentos de control
+que la entidad local4 puede emplear para asegurar el adecuado cumplimiento de la normativa aplicable
+en relación con los siguientes ámbitos:</li>
+</ol>
+<p><img src="/img/tabla2.png" alt=""></p>
+<ol start="5">
+<li>En el caso de redes híbridas5, el instrumento de control a utilizar, con carácter general, debe ser el que
+proceda para tutelar el bien jurídico que esté dotado de una garantía reforzada. Es decir, cuando el
+despliegue en base a algunas de las circunstancias que concurran esté sujeto a declaración responsable
+y en base a otras a la obtención de licencia previa, se optará por este último instrumento de control.</li>
+<li>Finalmente, iniciar el procedimiento correspondiente al instrumento de control que se recomienda
+emplear, y que se encontrará entre uno de los siguientes en función del caso concreto:</li>
+</ol>
+<p><img src="/img/tabla3.png" alt=""></p>
+</div>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-next button" href="/SANDETEL/docs/doc2"><span>2. Infraestructuras de redes de acceso a servicios de banda ancha</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#11-ámbito-de-aplicación">1.1 Ámbito de aplicación</a></li><li><a href="#12-diseño-metodológico">1.2 Diseño metodológico</a></li><li><a href="#13-destinatarios-y-método-de-utilización">1.3 Destinatarios y método de utilización</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/SANDETEL/" class="nav-home"><img src="/SANDETEL/img/2020-03-17_15h39_07.png" alt="Sociedad Andaluza para el Desarrollo de las Telecomunicaciones S.A. (SANDETEL)" width="66" height="58"/></a><div><h5>Docs</h5><a href="/SANDETEL/docs/en/doc1.html">Getting Started (or other categories)</a><a href="/SANDETEL/docs/en/doc2.html">Guides (or other categories)</a><a href="/SANDETEL/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/SANDETEL/en/users.html">User Showcase</a><a href="https://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/SANDETEL/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><a href="https://opensource.facebook.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/SANDETEL/img/oss_logo.png" alt="Facebook Open Source" width="170" height="45"/></a><section class="copyright">Copyright © 2020 Your Name or Your Company Name</section></footer></div></body></html>

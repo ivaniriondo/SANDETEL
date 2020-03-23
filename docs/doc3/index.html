@@ -1,0 +1,255 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>3. Escenarios generales de despliegue · Sociedad Andaluza para el Desarrollo de las Telecomunicaciones S.A. (SANDETEL)</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;div style=&quot;text-align: justify&quot;&gt;"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="3. Escenarios generales de despliegue · Sociedad Andaluza para el Desarrollo de las Telecomunicaciones S.A. (SANDETEL)"/><meta property="og:type" content="website"/><meta property="og:url" content="https://ivan.iriondo.github.io/SANDETEL/"/><meta property="og:description" content="&lt;div style=&quot;text-align: justify&quot;&gt;"/><meta property="og:image" content="https://ivan.iriondo.github.io/SANDETEL/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://ivan.iriondo.github.io/SANDETEL/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/SANDETEL/img/2020-03-17_15h39_07.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/SANDETEL/js/scrollSpy.js"></script><link rel="stylesheet" href="/SANDETEL/css/main.css"/><script src="/SANDETEL/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/SANDETEL/"><img class="logo" src="/SANDETEL/img/2020-03-17_15h39_07.png" alt="Sociedad Andaluza para el Desarrollo de las Telecomunicaciones S.A. (SANDETEL)"/><h2 class="headerTitleWithLogo">Sociedad Andaluza para el Desarrollo de las Telecomunicaciones S.A. (SANDETEL)</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/SANDETEL/docs/doc1" target="_self">Docs</a></li><li class=""><a href="/SANDETEL/help" target="_self">Help</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Índice</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Índice</h3><ul class=""><li class="navListItem"><a class="navItem" href="/SANDETEL/docs/doc1">1. Introducción</a></li><li class="navListItem"><a class="navItem" href="/SANDETEL/docs/doc2">2. Infraestructuras de redes de acceso a servicios de banda ancha</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/SANDETEL/docs/doc3">3. Escenarios generales de despliegue</a></li><li class="navListItem"><a class="navItem" href="/SANDETEL/docs/doc4">4. Escenarios especiales</a></li><li class="navListItem"><a class="navItem" href="/SANDETEL/docs/doc5">5. Aprovechamiento de infraestructuras físicas</a></li><li class="navListItem"><a class="navItem" href="/SANDETEL/docs/doc6">6. Aspectos a tener en cuenta en el despliegue de redes</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">3. Escenarios generales de despliegue</h1></header><article><div><span><div style="text-align: justify">
+<h2><a class="anchor" aria-hidden="true" id="31-descripción-general"></a><a href="#31-descripción-general" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3.1 Descripción general</h2>
+<p>Los escenarios generales de despliegue que aparecen en esta guía han sido establecidos mediante la combinación
+de distintas variables que pueden concurrir en el despliegue de redes y que, por su relevancia a efectos de definir
+el régimen jurídico aplicable, han sido consideradas. Las variables tenidas en cuenta han sido las siguientes:</p>
+<p><img src="/img/tabla4.png" alt=""></p>
+<p>Entre las variables consideradas la relativa a la especial complejidad técnica o entidad constructiva de la actuación
+es la que presenta mayor dificultad. En estos casos el análisis del supuesto de hecho real, a fin de determinar si,
+en relación con esta variable, estamos ante una u otra de las opciones corresponderá a la entidad local que
+conozca del mismo.</p>
+<h3><a class="anchor" aria-hidden="true" id="311-el-plan-de-despliegue"></a><a href="#311-el-plan-de-despliegue" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3.1.1 El plan de despliegue</h3>
+<p>Sin perjuicio de las variables que se han tenido en cuenta en esta guía para la definición de los escenarios de
+despliegue, debe mencionarse también la figura del plan de despliegue. Esta figura viene regulada en el artículo
+34.6 de la LGTel como “plan de despliegue e instalación de red”. Los aspectos más relevantes del plan de
+despliegue son los siguientes:</p>
+<ul>
+<li>El operador está habilitado para la presentación del plan de despliegue, en base al artículo 34.6 de la LGTel
+mencionado.</li>
+<li>Conforme al mencionado precepto la aprobación del plan de despliegue determinará la inexigibilidad de
+licencia o autorización para el despliegue de aquellas instalaciones que se incluyan en el plan y su sustitución
+por una declaración responsable, en los supuestos contemplados en el mismo precepto.</li>
+<li>El plan de despliegue y su solicitud de aprobación deben presentarse ante la administración competente para
+el otorgamiento de la licencia o autorización a la que están sujetas las instalaciones que contempla y cuya
+inexigibilidad se pretende.</li>
+<li>El plan de despliegue debe contemplar los despliegues aéreos o por fachadas de cables y equipos, en los
+términos indicados por el artículo 34 de la LGTEL.</li>
+<li>La determinación del contenido y las condiciones técnicas a las que debe quedar sujeto el plan de despliegue,
+se determinarán mediante RD en los términos previstos en el mismo artículo 34. Sin perjuicio de que dicha
+norma no ha sido aprobada hasta el momento, el plan debería ser una herramienta que permita a la
+administración que lo recibe obtener una información útil acerca del área o ámbito espacial en el que se
+ubicarán o por la que discurrirá el trazado de las instalaciones que el operador tiene la previsión de desplegar.
+La denegación de la aprobación del plan implica que las instalaciones que contempla siguen quedando sujetas
+a un control a priori del despliegue, mediante la correspondiente licencia o autorización, pero no supone una
+denegación del despliegue de las mismas.</li>
+</ul>
+<p>Cualquier otra tipología de documento que pueda presentarse ante la administración bajo la denominación de plan
+de despliegue, si no reúne las condiciones expresadas en el artículo 34 de la LGTel, no debería ser considerado
+como tal a los efectos del mencionado artículo.</p>
+<h2><a class="anchor" aria-hidden="true" id="32-despliegues-en-dominio-público"></a><a href="#32-despliegues-en-dominio-público" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3.2 Despliegues en dominio público</h2>
+<p>La naturaleza de las telecomunicaciones como servicios de interés general atribuye a los operadores una serie de
+instrumentos de acceso privilegiado al territorio. Entre dichos instrumentos destaca el derecho de ocupación del
+dominio público (art. 30 LGTEL). Sin embargo, el reconocimiento de este derecho de ocupación del dominio público
+no es suficiente para poder llevar a cabo el despliegue, los operadores deberán obtener el título habilitante oportuno
+para el uso o aprovechamiento de dicho dominio. En el otorgamiento del título habilitante deberá tenerse en cuenta,
+además de lo establecido en la LGTEL, la normativa estatal o autonómica específica relativa a la gestión del dominio
+público.</p>
+<p>Es relevante identificar el tipo de infraestructura de cuyo despliegue se trata ya que existen diferencias en el
+régimen aplicable al despliegue de redes cableadas o inalámbricas. Para identificar la tipología de red puede
+acudirse al apartado 2.</p>
+<h3><a class="anchor" aria-hidden="true" id="321-dominio-público-redes-cableadas"></a><a href="#321-dominio-público-redes-cableadas" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3.2.1 Dominio público. Redes cableadas</h3>
+<p>En este escenario de despliegue se recomienda emplear los instrumentos de control que se indican en el siguiente
+cuadro, sin perjuicio de las adaptaciones que puedan resultar convenientes en base a las particularidades del
+supuesto de que se trate o de las especialidades de la normativa local.</p>
+<p><img src="/img/tabla41.png" alt=""></p>
+<p>Particularidades del escenario:</p>
+<ol>
+<li>La determinación del título habilitante para la ocupación del dominio público vendrá determinada en cada
+caso por el tipo de uso que la red haga de dicho dominio (art. 30 LBELA).</li>
+<li>El control de la actuación, con independencia de que se trate de una obra de mayor o menor entidad, y
+a falta de disposición especial que determine otra cosa, puede realizarse por la administración local
+mediante su sometimiento a la licencia correspondiente (art. 169 LOUA). En relación con la licencia de
+funcionamiento o actividad, con carácter general, el ejercicio de actividades no se someterá a la obtención
+de licencia u otro medio de control preventivo (art. 84 bis LBRL).</li>
+<li>El instrumento de control ambiental será la CA-DR (Cat. 13.57 bis, Anexo I, LGICA).</li>
+</ol>
+<h3><a class="anchor" aria-hidden="true" id="322-dominio-público-redes-inalámbricas"></a><a href="#322-dominio-público-redes-inalámbricas" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3.2.2 Dominio público. Redes inalámbricas</h3>
+<p>En este escenario de despliegue se recomienda emplear los instrumentos de control que se indican en el siguiente
+cuadro, sin perjuicio de las adaptaciones que puedan resultar convenientes en base a las particularidades del
+supuesto de que se trate o de las especialidades de la normativa local.</p>
+<p><img src="/img/tabla5.png" alt=""></p>
+<p>Particularidades del escenario:</p>
+<ol>
+<li>La determinación del título habilitante para la ocupación del dominio público vendrá determinada en cada
+caso por el tipo de uso que la red haga de dicho dominio (art. 30 LBELA).</li>
+<li>El control de la actuación, con independencia de que se trate de una obra de mayor o menor entidad, y
+a falta de disposición especial que determine otra cosa, puede realizarse por la administración local
+mediante su sometimiento a la licencia correspondiente (art. 169 LOUA). En relación con la licencia de
+funcionamiento o actividad, con carácter general, el ejercicio de actividades no se someterá a licencia u
+otro medio de control preventivo (art. 84 bis LBRL).</li>
+<li>El instrumento de control ambiental en este caso será la CA (Cat. 13.57, Anexo I, LGICA).</li>
+</ol>
+<h2><a class="anchor" aria-hidden="true" id="33-despliegues-en-propiedad-privada"></a><a href="#33-despliegues-en-propiedad-privada" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3.3 Despliegues en propiedad privada</h2>
+<p>Para los despliegues que no tengan lugar en el ámbito del dominio público, sin perjuicio de que no será necesario
+un título que les habilite para ocupar dicho dominio, será preciso continuar realizando los controles oportunos, ya
+sea con carácter previo o a posteriori del despliegue, para comprobar que dicho despliegue se realiza conforme a
+la ordenación urbanística del municipio y al resto de la normativa de aplicación cuyo control corresponde a la
+entidad local.</p>
+<p>Es relevante identificar el tipo de infraestructura de cuyo despliegue se trata ya que existen diferencias en el
+régimen aplicable al despliegue de redes cableadas o inalámbricas. Para identificar la tipología de red puede
+acudirse al apartado 2.</p>
+<p>En relación con los despliegues que se produzcan en propiedad privada se introduce un nuevo aspecto a tener en
+cuenta para definir los escenarios de decisión, si el despliegue se realiza en edificaciones o fuera de edificaciones</p>
+<h3><a class="anchor" aria-hidden="true" id="331-propiedad-privada-redes-cableadas"></a><a href="#331-propiedad-privada-redes-cableadas" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3.3.1 Propiedad privada. Redes cableadas.</h3>
+<h4><a class="anchor" aria-hidden="true" id="3311-despliegue-en-edificaciones"></a><a href="#3311-despliegue-en-edificaciones" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3.3.1.1 Despliegue en edificaciones</h4>
+<p>En este escenario de despliegue se recomienda emplear los instrumentos de control que se indican en el siguiente
+cuadro, sin perjuicio de las adaptaciones que puedan resultar convenientes en base a las particularidades del
+supuesto de que se trate o de las especialidades de la normativa local.</p>
+<p><img src="/img/tabla6.png" alt=""></p>
+<p>Particularidades del escenario:</p>
+<ol>
+<li>No es exigible la licencia en el caso de instalaciones sobre edificaciones en propiedad privada, quedando
+estas sujetas a la mera presentación de una declaración responsable. Una vez presentada la declaración
+responsable necesaria para desplegar la instalación y ejecutada esta, el promotor deberá presentar ante
+la entidad local una comunicación de la finalización de las obras y de que las mismas se han llevado a
+cabo según el proyecto técnico o memoria técnica (DA 8ª LOE).</li>
+<li>Los despliegues por fachada son permitidos siempre que no existan canalizaciones subterráneas o en el
+interior de los edificios por los que desplegar las redes o no sea posible su uso por razones técnicas o
+económicas (art. 34.4 LGTEL).</li>
+<li>El instrumento de control ambiental en este caso será la CA-DR (Cat. 13.57 bis, Anexo I, LGICA).</li>
+</ol>
+<h4><a class="anchor" aria-hidden="true" id="3312-despliegue-fuera-de-edificaciones"></a><a href="#3312-despliegue-fuera-de-edificaciones" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3.3.1.2 Despliegue fuera de edificaciones</h4>
+<p>En este escenario de despliegue se recomienda emplear los instrumentos de control que se indican en el siguiente
+cuadro, sin perjuicio de las adaptaciones que puedan resultar convenientes en base a las particularidades del
+supuesto de que se trate o de las especialidades de la normativa local.</p>
+<p><img src="/img/tabla7.png" alt=""></p>
+<p>Particularidades del escenario:</p>
+<ol>
+<li>El control de la actuación, con independencia de que se trate de una obra de mayor o menor entidad, a
+falta de disposición especial que determine otra cosa, puede realizarse por la administración local
+mediante su sometimiento a la licencia correspondiente (art. 169 LOUA). En relación con la licencia de
+funcionamiento o actividad, con carácter general, el ejercicio de actividades no se someterá a la obtención
+de licencia u otro medio de control preventivo (art. 84 bis LBRL).</li>
+<li>El instrumento de control ambiental en este caso será la CA-DR (Cat. 13.57 bis, Anexo I, LGICA).</li>
+</ol>
+<p>Podría darse el caso de que el despliegue de redes discurra en parte de su trazado por terrenos de propiedad
+privada y en otra parte por terrenos de dominio público; estos supuestos deberán quedar sujetos al régimen más
+restrictivo en cuanto al instrumento de control aplicable. De este modo, la parte del despliegue de redes que tenga
+lugar en propiedad privada, quedará encuadrado en el régimen correspondiente a los despliegues realizados en
+dominio público.</p>
+<h3><a class="anchor" aria-hidden="true" id="332-propiedad-privada-redes-inalámbricas"></a><a href="#332-propiedad-privada-redes-inalámbricas" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3.3.2 Propiedad privada. Redes inalámbricas</h3>
+<h4><a class="anchor" aria-hidden="true" id="3321-despliegue-en-edificaciones"></a><a href="#3321-despliegue-en-edificaciones" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3.3.2.1 Despliegue en edificaciones</h4>
+<p>En este escenario de despliegue se recomienda emplear los instrumentos de control que se indican en el siguiente
+cuadro, sin perjuicio de las adaptaciones que puedan resultar convenientes en base a las particularidades del
+supuesto de que se trate o de las especialidades de la normativa local.</p>
+<p><img src="/img/tabla8.png" alt=""></p>
+<p>Particularidades del escenario:</p>
+<ol>
+<li>No es exigible la licencia en el caso de instalaciones sobre edificaciones en propiedad privada, quedando
+estas sujetas a la mera presentación de una declaración responsable. Una vez presentada la declaración
+responsable necesaria para desplegar la instalación y ejecutada esta, el promotor deberá presentar ante
+la entidad local una comunicación de la finalización de las obras y de que las mismas se han llevado a
+cabo según el proyecto técnico o memoria técnica (DA 8ª LOE).</li>
+<li>El instrumento de control ambiental en este caso será la CA-DR, salvo que concurra alguna de las
+siguientes excepciones recogidas en la categoría 13.57 del Anexo I de la LGICA:
+<ul>
+<li>Estaciones o instalaciones ubicadas en suelo no urbanizable.</li>
+<li>Las que ocupen una superficie construida mayor de 300 metros cuadrados, computándose a tal
+efecto toda la superficie incluida dentro del vallado de la estación o instalación.</li>
+<li>Que tenga impacto en Espacios Naturales Protegidos de Andalucía, Red Natura 2000 y áreas
+protegidas por instrumentos internacionales, según la regulación de la Ley 4/2007, de 13 de
+diciembre, de Patrimonio Natural y la Biodiversidad.</li>
+<li>Que tengan impacto en el patrimonio histórico-artístico o en el uso privativo y ocupación de los bienes
+de dominio público.</li>
+</ul></li>
+</ol>
+<h4><a class="anchor" aria-hidden="true" id="3322-despliegue-fuera-de-edificaciones"></a><a href="#3322-despliegue-fuera-de-edificaciones" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3.3.2.2 Despliegue fuera de edificaciones</h4>
+<p>En este escenario de despliegue se recomienda emplear los instrumentos de control que se indican en los
+siguientes cuadros, sin perjuicio de las adaptaciones que puedan resultar convenientes en base a las
+particularidades del supuesto de que se trate o de las especialidades de la normativa local.</p>
+<p>En este escenario se añade un nuevo nivel de decisión, ya que es preciso distinguir entre el supuesto general y
+una serie de supuestos excepcionales que se detallarán.</p>
+<p><strong>Supuesto general:</strong></p>
+<p><img src="/img/tabla9.png" alt=""></p>
+<p>Particularidades del escenario:</p>
+<ol>
+<li>En aquellos supuestos en que la entidad local considere que la actuación, por su entidad o complejidad
+técnica lo haga aconsejable, se podrá determinar que el instrumento de control sea la licencia (art. 3.3
+en relación con la DA 3ª LMULC).</li>
+<li>La regla general para el despliegue de redes inalámbricas en propiedad privada es la inexigibilidad de
+licencia de instalación, funcionamiento o actividad (art. 3.1 en relación con la DA 3ª LMULC).</li>
+<li>El instrumento de control ambiental en este caso será la CA-DR, salvo que concurra alguna de las
+excepciones de la categoría 13.57 del Anexo I de la LGICA:
+<ul>
+<li>Estaciones o instalaciones ubicadas en suelo no urbanizable.</li>
+<li>Las que ocupen una superficie construida mayor de 300 metros cuadrados, computándose a tal
+efecto toda la superficie incluida dentro del vallado de la estación o instalación.</li>
+<li>Que tenga impacto en Espacios Naturales Protegidos de Andalucía, Red Natura 2000 y áreas
+protegidas por instrumentos internacionales, según la regulación de la Ley 4/2007, de 13 de
+diciembre, de Patrimonio Natural y la Biodiversidad.</li>
+<li>Que tengan impacto en el patrimonio histórico-artístico o en el uso privativo y ocupación de los bienes
+de dominio público.</li>
+</ul></li>
+</ol>
+<p><strong>Supuestos excepcionales:</strong> instalación de más de 300m2, que impacten en patrimonio histórico artístico o tengan
+incidencia en espacios naturales protegidos.</p>
+<p><img src="/img/tabla10.png" alt=""></p>
+<p>Particularidades del escenario:</p>
+<ol>
+<li>El control de la actuación, a falta de disposición especial que determine otra cosa, puede realizarse por
+la administración local mediante su sometimiento a la licencia correspondiente (art. 169 LOUA)</li>
+<li>En estos supuestos excepcionales podría no aplicarse el régimen general de inexigibilidad de licencia
+previsto en el apartado anterior, quedando sujeta la actuación al control previo de la administración
+mediante licencia (art. 3.1 en relación con la DA 3ª LMULC). En relación con la licencia de funcionamiento
+o actividad, con carácter general, el ejercicio de actividades no se someterá a la obtención de licencia u
+otro medio de control preventivo (art. 84 bis LBRL).</li>
+<li>El instrumento de control ambiental en este caso será la CA (Cat. 13.57, Anexo I, LGICA).</li>
+</ol>
+</div>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/SANDETEL/docs/doc2"><span class="arrow-prev">← </span><span>2. Infraestructuras de redes de acceso a servicios de banda ancha</span></a><a class="docs-next button" href="/SANDETEL/docs/doc4"><span>4. Escenarios especiales</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#31-descripción-general">3.1 Descripción general</a><ul class="toc-headings"><li><a href="#311-el-plan-de-despliegue">3.1.1 El plan de despliegue</a></li></ul></li><li><a href="#32-despliegues-en-dominio-público">3.2 Despliegues en dominio público</a><ul class="toc-headings"><li><a href="#321-dominio-público-redes-cableadas">3.2.1 Dominio público. Redes cableadas</a></li><li><a href="#322-dominio-público-redes-inalámbricas">3.2.2 Dominio público. Redes inalámbricas</a></li></ul></li><li><a href="#33-despliegues-en-propiedad-privada">3.3 Despliegues en propiedad privada</a><ul class="toc-headings"><li><a href="#331-propiedad-privada-redes-cableadas">3.3.1 Propiedad privada. Redes cableadas.</a></li><li><a href="#332-propiedad-privada-redes-inalámbricas">3.3.2 Propiedad privada. Redes inalámbricas</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/SANDETEL/" class="nav-home"><img src="/SANDETEL/img/2020-03-17_15h39_07.png" alt="Sociedad Andaluza para el Desarrollo de las Telecomunicaciones S.A. (SANDETEL)" width="66" height="58"/></a><div><h5>Docs</h5><a href="/SANDETEL/docs/en/doc1.html">Getting Started (or other categories)</a><a href="/SANDETEL/docs/en/doc2.html">Guides (or other categories)</a><a href="/SANDETEL/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/SANDETEL/en/users.html">User Showcase</a><a href="https://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/SANDETEL/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><a href="https://opensource.facebook.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/SANDETEL/img/oss_logo.png" alt="Facebook Open Source" width="170" height="45"/></a><section class="copyright">Copyright © 2020 Your Name or Your Company Name</section></footer></div></body></html>
